@@ -1,0 +1,266 @@
+.page--recommandations .page-actions {
+  margin-bottom: 0;
+}
+
+/* 1️⃣ Signal d'urgence globale */
+.signal-urgence {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1.25rem;
+  margin-bottom: 1rem;
+  padding: 0.6rem 0.9rem;
+  background: #f7fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #2d3748;
+}
+
+.signal-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.signal-dot {
+  font-size: 0.75rem;
+  line-height: 1;
+}
+
+.signal-item--critique { color: #b91c1c; }
+.signal-item--haute { color: #c45a11; }
+.signal-item--moyenne { color: #b7791f; }
+.signal-item--basse { color: #276749; }
+
+/* 2️⃣ Bouton config règles : plus contrasté, levier système */
+.btn-config {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.55rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #1a365d;
+  background: #e6f2ff;
+  border: 1px solid #0d5a8a;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+}
+
+.btn-config:hover {
+  background: #cce5ff;
+  border-color: #0a4569;
+  color: #0a4569;
+}
+
+.btn-config-icon {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.filtres {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+}
+
+.filtres-title {
+  margin: 0 0 0.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #2d3748;
+}
+
+.filtres-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.filtre-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.filtre-label {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #4a5568;
+}
+
+.filtre-select {
+  padding: 0.5rem 0.75rem;
+  font-size: 0.9rem;
+  border: 1px solid #cbd5e0;
+  border-radius: 6px;
+  background: #fff;
+  min-width: 140px;
+}
+
+.recommandations-list-title {
+  margin: 0 0 1rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2d3748;
+}
+
+.recommandations-cards {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.reco-card {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* 4️⃣ États : Nouvelle = bordure/point, Vue = neutre/grisé */
+.reco-card--nouvelle {
+  border-left: 4px solid #0d5a8a;
+  background: #fafbff;
+}
+
+.reco-card--vue {
+  opacity: 0.92;
+  background: #f7fafc;
+}
+
+.reco-card--vue .reco-card-action {
+  color: #4a5568;
+}
+
+.reco-card-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.reco-badge {
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+}
+
+.reco-badge--type-rh {
+  background: #ebf8ff;
+  color: #0d5a8a;
+}
+
+.reco-badge--type-lits {
+  background: #f0fff4;
+  color: #276749;
+}
+
+.reco-badge--type-stocks {
+  background: #fffaf0;
+  color: #c45a11;
+}
+
+.reco-badge--priorite-critique {
+  background: #fff5f5;
+  color: #b91c1c;
+}
+
+.reco-badge--priorite-haute {
+  background: #fffaf0;
+  color: #c45a11;
+}
+
+.reco-badge--priorite-moyenne {
+  background: #faf5ff;
+  color: #6b46c1;
+}
+
+.reco-badge--priorite-basse {
+  background: #f7fafc;
+  color: #4a5568;
+}
+
+.reco-badge--etat {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: #edf2f7;
+  color: #4a5568;
+}
+
+.reco-badge--etat-nouvelle {
+  background: #e6f2ff;
+  color: #0d5a8a;
+}
+
+.reco-badge--etat-vue {
+  background: #e2e8f0;
+  color: #718096;
+}
+
+.reco-badge-point {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #0d5a8a;
+  flex-shrink: 0;
+}
+
+.reco-card-action {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #2d3748;
+  line-height: 1.35;
+}
+
+/* 3️⃣ Ligne déclencheur (explicabilité) */
+.reco-card-declencheur {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #4a5568;
+  line-height: 1.4;
+  font-style: italic;
+}
+
+.reco-card-service {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #718096;
+}
+
+.reco-card-link {
+  margin-top: auto;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #0d5a8a;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.reco-card-link:hover {
+  color: #0a4569;
+  text-decoration: underline;
+}
+
+.recommandations-empty {
+  margin: 0;
+  padding: 2rem;
+  text-align: center;
+  color: #718096;
+  font-size: 0.95rem;
+}

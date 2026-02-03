@@ -1,0 +1,173 @@
+.page--impact .page-header {
+  margin-bottom: 1rem;
+}
+
+.impact-title {
+  margin: 0 0 0.25rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1a365d;
+}
+
+.impact-subtitle {
+  margin: 0 0 1.5rem;
+  font-size: 0.95rem;
+  color: #4a5568;
+}
+
+.impact-rappel {
+  margin-bottom: 1.5rem;
+  padding: 1rem 1.25rem;
+  background: #f7fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+}
+
+.impact-section-title {
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #4a5568;
+}
+
+.impact-action {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #2d3748;
+}
+
+.impact-service {
+  margin: 0.25rem 0 0;
+  font-size: 0.9rem;
+  color: #718096;
+}
+
+.impact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+@media (max-width: 800px) {
+  .impact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.impact-params {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 1.25rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.impact-param {
+  margin-bottom: 1rem;
+}
+
+.impact-param-label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #4a5568;
+  margin-bottom: 0.35rem;
+}
+
+.impact-param-input {
+  width: 100%;
+  max-width: 200px;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.95rem;
+  border: 1px solid #cbd5e0;
+  border-radius: 6px;
+}
+
+.impact-btn-simuler {
+  margin-top: 1rem;
+}
+
+.impact-resultats {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 1.25rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.impact-placeholder {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #718096;
+}
+
+.impact-avant-apres {
+  overflow-x: auto;
+  margin-bottom: 1rem;
+}
+
+.impact-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.impact-table th,
+.impact-table td {
+  padding: 0.6rem 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.impact-table th {
+  font-weight: 600;
+  color: #4a5568;
+  background: #f7fafc;
+}
+
+.impact-apres {
+  font-weight: 600;
+  color: #0d7a4a;
+}
+
+.impact-delta--positif {
+  color: #0d7a4a;
+  font-weight: 500;
+}
+
+.impact-delta--negatif {
+  color: #718096;
+  font-weight: 500;
+}
+
+.impact-kpi-hint {
+  margin: 0 0 1rem;
+  font-size: 0.8rem;
+  color: #718096;
+}
+
+.impact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.impact-actions .btn-success {
+  background: #0d7a4a;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: background 0.2s;
+}
+
+.impact-actions .btn-success:hover {
+  background: #0a5c38;
+}

@@ -1,0 +1,9 @@
+.app {
+  --color-vert: #0d7a4a;
+  --color-orange: #c45a11;
+  --color-rouge: #b91c1c;
+  --color-cta: #0d5a8a;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
