@@ -1,0 +1,24 @@
+:root {
+  --color-vert: #0d7a4a;
+  --color-orange: #c45a11;
+  --color-rouge: #b91c1c;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #f5f6f8;
+  color: #1a1d23;
+}
+
+#root {
+  min-height: 100vh;
+}

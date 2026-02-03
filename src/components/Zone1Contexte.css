@@ -1,0 +1,54 @@
+.zone1-contexte {
+  padding: 1rem 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.zone1-title {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1a365d;
+}
+
+.zone1-subtitle {
+  margin: 0.35rem 0 1rem;
+  font-size: 0.95rem;
+  color: #4a5568;
+}
+
+.zone1-scenarios {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.zone1-card {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  background: #fff;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #2d3748;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s, box-shadow 0.2s;
+}
+
+.zone1-card:hover {
+  border-color: #cbd5e0;
+  background: #f7fafc;
+}
+
+.zone1-card--active {
+  border-color: #0d5a8a;
+  background: #ebf8ff;
+  color: #0d5a8a;
+  box-shadow: 0 0 0 1px #0d5a8a;
+}
+
+.zone1-card-icon {
+  font-size: 1.1rem;
+}

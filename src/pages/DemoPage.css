@@ -1,0 +1,372 @@
+.demo-page {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #f7fafc;
+}
+
+/* ZONE 1 — Bandeau Mode Démo */
+.demo-bandeau {
+  background: #2c5282;
+  color: #fff;
+  padding: 0.6rem 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.demo-bandeau-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.demo-badge {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.demo-mention {
+  font-size: 0.8rem;
+  opacity: 0.9;
+}
+
+.demo-btn-quitter {
+  margin-left: auto;
+  padding: 0.4rem 0.75rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.demo-btn-quitter:hover {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.demo-content {
+  flex: 1;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  width: 100%;
+}
+
+/* ZONE 2 — Sélecteur de scénario */
+.demo-selecteur {
+  padding: 1rem 0;
+}
+
+.demo-title {
+  margin: 0 0 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1a365d;
+}
+
+.demo-intro {
+  margin: 0 0 1.5rem;
+  font-size: 0.95rem;
+  color: #4a5568;
+}
+
+.demo-scenarios {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.demo-scenario-card {
+  text-align: left;
+  padding: 1.25rem 1.5rem;
+  background: #fff;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.demo-scenario-card:hover {
+  border-color: #2c5282;
+  box-shadow: 0 4px 12px rgba(44, 82, 130, 0.15);
+}
+
+.demo-scenario-titre {
+  margin: 0 0 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #2c5282;
+}
+
+.demo-scenario-desc {
+  margin: 0 0 0.75rem;
+  font-size: 0.9rem;
+  color: #4a5568;
+  line-height: 1.45;
+}
+
+.demo-scenario-cta {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #2c5282;
+}
+
+/* ZONE 3 — Parcours guidé */
+.demo-parcours {
+  margin-bottom: 1.5rem;
+  padding: 1.25rem;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.demo-parcours-title {
+  margin: 0 0 0.35rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2d3748;
+}
+
+.demo-scenario-courant {
+  margin: 0 0 1rem;
+  font-size: 0.9rem;
+  color: #718096;
+}
+
+.demo-timeline {
+  list-style: none;
+  margin: 0 0 1rem;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.demo-timeline-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.75rem;
+  font-size: 0.85rem;
+  border-radius: 8px;
+  background: #edf2f7;
+  color: #718096;
+  transition: background 0.2s, color 0.2s;
+}
+
+.demo-timeline-item--active {
+  background: #2c5282;
+  color: #fff;
+  font-weight: 600;
+}
+
+.demo-timeline-item--done {
+  background: #e6fffa;
+  color: #0d7a4a;
+}
+
+.demo-timeline-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.1);
+  font-weight: 600;
+  font-size: 0.75rem;
+}
+
+.demo-timeline-item--active .demo-timeline-num {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.demo-timeline-item--done .demo-timeline-num {
+  background: #0d7a4a;
+  color: #fff;
+}
+
+.demo-etape-texte {
+  margin: 0 0 1rem;
+  padding: 0.75rem 1rem;
+  font-size: 0.95rem;
+  color: #2d3748;
+  background: #f7fafc;
+  border-left: 4px solid #2c5282;
+  border-radius: 0 8px 8px 0;
+  line-height: 1.5;
+}
+
+/* Contexte initial éditable (étape 1) */
+.demo-contexte-initial-wrap {
+  margin: 0 0 1rem;
+}
+
+.demo-contexte-initial-label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #2c5282;
+  margin-bottom: 0.4rem;
+}
+
+.demo-contexte-initial-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 0.95rem;
+  font-family: inherit;
+  color: #2d3748;
+  background: #f7fafc;
+  border: 1px solid #cbd5e0;
+  border-left: 4px solid #2c5282;
+  border-radius: 0 8px 8px 0;
+  line-height: 1.5;
+  resize: vertical;
+  min-height: 100px;
+}
+
+.demo-contexte-initial-input::placeholder {
+  color: #718096;
+}
+
+.demo-contexte-initial-input:focus {
+  outline: none;
+  border-color: #2c5282;
+  box-shadow: 0 0 0 2px rgba(44, 82, 130, 0.2);
+}
+
+.demo-nav-etapes {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.demo-nav-etapes .btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ZONE 4 — Avant / Après */
+.demo-avant-apres {
+  margin-bottom: 1.5rem;
+  padding: 1.25rem;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.demo-section-title {
+  margin: 0 0 1rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #2d3748;
+}
+
+.demo-table-wrap {
+  overflow-x: auto;
+}
+
+.demo-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.demo-table th,
+.demo-table td {
+  padding: 0.6rem 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.demo-table th {
+  font-weight: 600;
+  color: #4a5568;
+  background: #f7fafc;
+}
+
+.demo-avant {
+  color: var(--color-rouge);
+  font-weight: 500;
+}
+
+.demo-apres {
+  color: var(--color-vert);
+  font-weight: 600;
+}
+
+.demo-delta--positif {
+  color: var(--color-vert);
+  font-weight: 600;
+}
+
+/* ZONE 5 — Message pédagogique */
+.demo-message {
+  margin-bottom: 1.5rem;
+  padding: 1rem 1.25rem;
+  background: #f0fff4;
+  border: 1px solid #9ae6b4;
+  border-radius: 10px;
+}
+
+.demo-message-text {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #276749;
+  line-height: 1.45;
+}
+
+/* ZONE 6 — Contrôles */
+.demo-controles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.demo-controles .btn {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, color 0.2s;
+}
+
+.demo-controles .btn-secondary {
+  background: #fff;
+  color: #4a5568;
+  border: 1px solid #cbd5e0;
+}
+
+.demo-controles .btn-secondary:hover {
+  background: #f7fafc;
+  border-color: #a0aec0;
+}
+
+.btn-outline-demo {
+  background: transparent;
+  color: #2c5282;
+  border: 1px solid #2c5282;
+}
+
+.btn-outline-demo:hover {
+  background: #ebf8ff;
+}

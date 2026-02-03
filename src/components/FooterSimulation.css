@@ -1,0 +1,54 @@
+.footer-simulation {
+  margin-top: auto;
+  padding: 1.25rem 0;
+  border-top: 1px solid #e2e8f0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #4a5568;
+}
+
+.footer-badge-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #48bb78;
+}
+
+.footer-disclaimer {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #718096;
+}
+
+.footer-reset {
+  margin-left: auto;
+  padding: 0.5rem 1rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #718096;
+  background: transparent;
+  border: 1px solid #cbd5e0;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.footer-reset:hover:not(:disabled) {
+  color: #2d3748;
+  border-color: #718096;
+}
+
+.footer-reset:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
