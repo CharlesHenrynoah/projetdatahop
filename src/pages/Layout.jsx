@@ -28,6 +28,12 @@ export default function Layout() {
           >
             Mode Démo
           </NavLink>
+          <NavLink
+            to="/dashboard"
+            className={({ isActive }) => (isActive ? 'app-nav-link app-nav-link--active' : 'app-nav-link')}
+          >
+            Dashboard Hôpital
+          </NavLink>
         </nav>
       </header>
       <Outlet />

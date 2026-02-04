@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 :root {
   --color-vert: #0d7a4a;
   --color-orange: #c45a11;
@@ -21,4 +23,40 @@ body {
 
 #root {
   min-height: 100vh;
+}
+
+@keyframes zone3-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-zone3-fade-in {
+  animation: zone3-fade-in 0.35s ease-out;
+}
+
+/* Slider thème Dashboard Hôpital */
+.slider-theme::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #0d5a8a;
+  cursor: pointer;
+  border: 2px solid #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+.slider-theme::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #0d5a8a;
+  cursor: pointer;
+  border: 2px solid #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }

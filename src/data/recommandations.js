@@ -4,6 +4,7 @@ export const ETATS_RECOM = {
   NOUVELLE: 'nouvelle',
   VUE: 'vue',
   APPLIQUEE: 'appliquee',
+  REPORTEE: 'reportee',
   IGNOREE: 'ignoree',
 }
 
@@ -31,6 +32,7 @@ export const LABELS_ETAT = {
   [ETATS_RECOM.NOUVELLE]: 'Nouvelle',
   [ETATS_RECOM.VUE]: 'Vue',
   [ETATS_RECOM.APPLIQUEE]: 'Appliquée',
+  [ETATS_RECOM.REPORTEE]: 'Reportée',
   [ETATS_RECOM.IGNOREE]: 'Ignorée',
 }
 
@@ -65,6 +67,79 @@ export const REGLES_MOCK = [
     contexte: { typeJour: 'tous', scope: 'Urgences' },
     action: { type: 'rh', libelle: 'Redéploiement RH' },
   },
+]
+
+/** Options pour les formulaires (création recommandation, etc.) */
+export const SERVICES_OPTIONS = [
+  'Médecine interne',
+  'Urgences',
+  'Pharmacie',
+  'Imagerie',
+  'Réanimation',
+  'Bloc opératoire',
+  'Global',
+]
+
+export const ACTIONS_PROPOSEES_OPTIONS = [
+  'Ouvrir 10 lits en médecine interne',
+  'Ouvrir 15 lits en médecine interne',
+  'Déplacer 3 soignants du service A vers Urgences',
+  'Déplacer 5 soignants vers Urgences',
+  'Alerte stock critique — médicament X',
+  'Alerte stocks — réapprovisionnement',
+  'Redéploiement RH vers service saturé',
+  'Ouverture lits supplémentaires',
+  'Renfort personnel de nuit',
+]
+
+export const DECLENCHEURS_OPTIONS = [
+  "Déclenché car taux d'occupation > 92 % depuis 4 h",
+  "Déclenché car taux de couverture RH < 70 % depuis 2 h",
+  'Déclenché car stock < 5 unités (seuil critique)',
+  'Déclenché car occupation > 85 %',
+  'Déclenché car tension RH prolongée',
+  'Seuil critique dépassé depuis plus de 2 h',
+]
+
+export const DONNEES_SOURCES_OPTIONS = [
+  'Occupation actuelle : 88 %',
+  'Occupation actuelle : 92 %',
+  'Taux couverture : 65 %',
+  'Stock actuel : 3 unités',
+  'Données temps réel flux',
+  'Indicateurs hebdomadaires',
+]
+
+export const SEUILS_FRANCHIS_OPTIONS = [
+  'Seuil 85 % dépassé',
+  'Seuil 70 % non atteint',
+  'Seuil minimum 5 unités',
+  'Seuil critique atteint',
+  'Seuil d\'alerte dépassé',
+]
+
+export const IMPACT_OCCUPATION_OPTIONS = [
+  '+4 % de capacité',
+  'Stable',
+  '—',
+  'Augmentation capacité lits',
+  'Réduction saturation',
+]
+
+export const IMPACT_DELAIS_OPTIONS = [
+  "Réduction file d'attente",
+  "Amélioration temps de prise en charge",
+  "Risque rupture sous 48 h",
+  '—',
+  'Délais maintenus',
+]
+
+export const IMPACT_CHARGE_RH_OPTIONS = [
+  'Stable',
+  '+3 ETP sur Urgences',
+  '—',
+  'Légère hausse',
+  'Redéploiement interne',
 ]
 
 export const RECOMMANDATIONS_MOCK = [

@@ -1,0 +1,147 @@
+{"location":"ForecastPage.jsx:effect","message":"Sending forecast request","data":{"horizon":7,"dataFromFile":true},"timestamp":1770195444996,"sessionId":"debug-session","hypothesisId":"C"}
+{"location":"ForecastPage.jsx:fetch-then","message":"Response received","data":{"ok":false,"status":502},"timestamp":1770195445270,"sessionId":"debug-session","hypothesisId":"C"}
+{"location":"ForecastPage.jsx:data","message":"Parsed response","data":{"hasError":true,"errorMsg":"Erreur Gemini"},"timestamp":1770195445270,"sessionId":"debug-session","hypothesisId":"C"}
+{"location":"ForecastPage.jsx:effect","message":"Sending forecast request","data":{"horizon":14,"dataFromFile":true},"timestamp":1770195445947,"sessionId":"debug-session","hypothesisId":"C"}
+{"location":"ForecastPage.jsx:fetch-then","message":"Response received","data":{"ok":false,"status":502},"timestamp":1770195446052,"sessionId":"debug-session","hypothesisId":"C"}
+{"location":"ForecastPage.jsx:data","message":"Parsed response","data":{"hasError":true,"errorMsg":"Erreur Gemini"},"timestamp":1770195446052,"sessionId":"debug-session","hypothesisId":"C"}
+{"location":"ForecastPage.jsx:effect","message":"Sending forecast request","data":{"horizon":14,"dataFromFile":true},"timestamp":1770195534508,"sessionId":"debug-session","hypothesisId":"C"}
+{"location":"server/index.js:forecast/resources:entry","message":"Route hit","data":{"hasKey":true,"keyPrefix":"AIzaSyB3GC"},"timestamp":1770195534539,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"server/index.js:gemini-not-ok","message":"Gemini API error","data":{"status":429,"errSnippet":"{\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a"},"timestamp":1770195534818,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"ForecastPage.jsx:fetch-then","message":"Response received","data":{"ok":true,"status":200},"timestamp":1770195534823,"sessionId":"debug-session","hypothesisId":"C"}
+{"location":"ForecastPage.jsx:data","message":"Parsed response","data":{"hasError":true,"errorMsg":"Erreur Gemini (vérifiez la clé API et les quotas)"},"timestamp":1770195534823,"sessionId":"debug-session","hypothesisId":"C"}
+{"location":"ForecastPage.jsx:effect","message":"Sending forecast request","data":{"horizon":14,"dataFromFile":true},"timestamp":1770195666499,"sessionId":"debug-session","hypothesisId":"C"}
+{"location":"server/index.js:forecast/resources:entry","message":"Route hit","data":{"hasKey":true,"keyPrefix":"AIzaSyB3GC"},"timestamp":1770195666587,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"server/index.js:gemini-not-ok","message":"Gemini API error","data":{"status":429,"errSnippet":"{\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a"},"timestamp":1770195666963,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"ForecastPage.jsx:fetch-then","message":"Response received","data":{"ok":true,"status":200},"timestamp":1770195666968,"sessionId":"debug-session","hypothesisId":"C"}
+{"location":"ForecastPage.jsx:data","message":"Parsed response","data":{"hasError":true,"errorMsg":"Erreur Gemini (vérifiez la clé API et les quotas)"},"timestamp":1770195666968,"sessionId":"debug-session","hypothesisId":"C"}
+{"location":"ForecastPage.jsx:effect","message":"Sending forecast request","data":{"horizon":14,"dataFromFile":true},"timestamp":1770195676657,"sessionId":"debug-session","hypothesisId":"C"}
+{"location":"server/index.js:forecast/resources:entry","message":"Route hit","data":{"hasKey":true,"keyPrefix":"AIzaSyB3GC"},"timestamp":1770195676679,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"server/index.js:gemini-not-ok","message":"Gemini API error","data":{"status":429,"errSnippet":"{\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a"},"timestamp":1770195676942,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"ForecastPage.jsx:fetch-then","message":"Response received","data":{"ok":true,"status":200},"timestamp":1770195676945,"sessionId":"debug-session","hypothesisId":"C"}
+{"location":"ForecastPage.jsx:data","message":"Parsed response","data":{"hasError":true,"errorMsg":"Erreur Gemini (vérifiez la clé API et les quotas)"},"timestamp":1770195676945,"sessionId":"debug-session","hypothesisId":"C"}
+{"location":"ForecastPage.jsx:effect","message":"Sending forecast request","data":{"horizon":14,"dataFromFile":true},"timestamp":1770195691967,"sessionId":"debug-session","hypothesisId":"C"}
+{"location":"server/index.js:forecast/resources:entry","message":"Route hit","data":{"hasKey":true,"keyPrefix":"AIzaSyDjwY"},"timestamp":1770195691999,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"server/index.js:gemini-response","message":"Gemini 200","data":{"finishReason":"STOP","hasCandidates":true,"rawLength":1128},"timestamp":1770195695362,"sessionId":"debug-session","hypothesisId":"D"}
+{"location":"server/index.js:success","message":"Returning days","data":{"daysCount":14},"timestamp":1770195695363,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"ForecastPage.jsx:fetch-then","message":"Response received","data":{"ok":true,"status":200},"timestamp":1770195695370,"sessionId":"debug-session","hypothesisId":"C"}
+{"location":"ForecastPage.jsx:data","message":"Parsed response","data":{"hasError":false,"daysLength":14},"timestamp":1770195695371,"sessionId":"debug-session","hypothesisId":"C"}
+{"location":"ForecastPage.jsx:effect","message":"Sending forecast request","data":{"horizon":14,"dataFromFile":true},"timestamp":1770195697988,"sessionId":"debug-session","hypothesisId":"C"}
+{"location":"server/index.js:forecast/resources:entry","message":"Route hit","data":{"hasKey":true,"keyPrefix":"AIzaSyDjwY"},"timestamp":1770195697995,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"server/index.js:gemini-response","message":"Gemini 200","data":{"finishReason":"STOP","hasCandidates":true,"rawLength":1128},"timestamp":1770195701413,"sessionId":"debug-session","hypothesisId":"D"}
+{"location":"server/index.js:success","message":"Returning days","data":{"daysCount":14},"timestamp":1770195701414,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"ForecastPage.jsx:fetch-then","message":"Response received","data":{"ok":true,"status":200},"timestamp":1770195701418,"sessionId":"debug-session","hypothesisId":"C"}
+{"location":"ForecastPage.jsx:data","message":"Parsed response","data":{"hasError":false,"daysLength":14},"timestamp":1770195701419,"sessionId":"debug-session","hypothesisId":"C"}
+{"location":"ForecastPage.jsx:effect","message":"Sending forecast request","data":{"horizon":21,"dataFromFile":true},"timestamp":1770195712641,"sessionId":"debug-session","hypothesisId":"C"}
+{"location":"server/index.js:forecast/resources:entry","message":"Route hit","data":{"hasKey":true,"keyPrefix":"AIzaSyDjwY"},"timestamp":1770195712649,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"server/index.js:gemini-response","message":"Gemini 200","data":{"finishReason":"STOP","hasCandidates":true,"rawLength":1681},"timestamp":1770195717098,"sessionId":"debug-session","hypothesisId":"D"}
+{"location":"server/index.js:success","message":"Returning days","data":{"daysCount":21},"timestamp":1770195717099,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"ForecastPage.jsx:fetch-then","message":"Response received","data":{"ok":true,"status":200},"timestamp":1770195717102,"sessionId":"debug-session","hypothesisId":"C"}
+{"location":"ForecastPage.jsx:data","message":"Parsed response","data":{"hasError":false,"daysLength":21},"timestamp":1770195717103,"sessionId":"debug-session","hypothesisId":"C"}
+{"location":"ForecastPage.jsx:effect","message":"Sending forecast request","data":{"horizon":30,"dataFromFile":true},"timestamp":1770195721520,"sessionId":"debug-session","hypothesisId":"C"}
+{"location":"server/index.js:forecast/resources:entry","message":"Route hit","data":{"hasKey":true,"keyPrefix":"AIzaSyDjwY"},"timestamp":1770195721524,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"server/index.js:gemini-response","message":"Gemini 200","data":{"finishReason":"STOP","hasCandidates":true,"rawLength":2392},"timestamp":1770195728315,"sessionId":"debug-session","hypothesisId":"D"}
+{"location":"server/index.js:success","message":"Returning days","data":{"daysCount":30},"timestamp":1770195728316,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"ForecastPage.jsx:fetch-then","message":"Response received","data":{"ok":true,"status":200},"timestamp":1770195728318,"sessionId":"debug-session","hypothesisId":"C"}
+{"location":"ForecastPage.jsx:data","message":"Parsed response","data":{"hasError":false,"daysLength":30},"timestamp":1770195728319,"sessionId":"debug-session","hypothesisId":"C"}
+{"location":"ForecastPage.jsx:effect","message":"Sending forecast request","data":{"horizon":14,"dataFromFile":true},"timestamp":1770195746316,"sessionId":"debug-session","hypothesisId":"C"}
+{"location":"ForecastPage.jsx:effect","message":"Sending forecast request","data":{"horizon":14,"dataFromFile":true},"timestamp":1770195746316,"sessionId":"debug-session","hypothesisId":"C"}
+{"location":"server/index.js:forecast/resources:entry","message":"Route hit","data":{"hasKey":true,"keyPrefix":"AIzaSyDjwY"},"timestamp":1770195746322,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"server/index.js:forecast/resources:entry","message":"Route hit","data":{"hasKey":true,"keyPrefix":"AIzaSyDjwY"},"timestamp":1770195746326,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"server/index.js:gemini-response","message":"Gemini 200","data":{"finishReason":"STOP","hasCandidates":true,"rawLength":1128},"timestamp":1770195749382,"sessionId":"debug-session","hypothesisId":"D"}
+{"location":"server/index.js:success","message":"Returning days","data":{"daysCount":14},"timestamp":1770195749383,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"ForecastPage.jsx:fetch-then","message":"Response received","data":{"ok":true,"status":200},"timestamp":1770195749387,"sessionId":"debug-session","hypothesisId":"C"}
+{"location":"ForecastPage.jsx:data","message":"Parsed response","data":{"hasError":false,"daysLength":14},"timestamp":1770195749388,"sessionId":"debug-session","hypothesisId":"C"}
+{"location":"server/index.js:gemini-response","message":"Gemini 200","data":{"finishReason":"STOP","hasCandidates":true,"rawLength":1128},"timestamp":1770195749604,"sessionId":"debug-session","hypothesisId":"D"}
+{"location":"server/index.js:success","message":"Returning days","data":{"daysCount":14},"timestamp":1770195749604,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"ForecastPage.jsx:fetch-then","message":"Response received","data":{"ok":true,"status":200},"timestamp":1770195749606,"sessionId":"debug-session","hypothesisId":"C"}
+{"location":"ForecastPage.jsx:data","message":"Parsed response","data":{"hasError":false,"daysLength":14},"timestamp":1770195749606,"sessionId":"debug-session","hypothesisId":"C"}
+{"location":"ForecastPage.jsx:effect","message":"Sending forecast request","data":{"horizon":14,"dataFromFile":true},"timestamp":1770195823246,"sessionId":"debug-session","hypothesisId":"C"}
+{"location":"server/index.js:forecast/resources:entry","message":"Route hit","data":{"hasKey":true,"keyPrefix":"AIzaSyDjwY"},"timestamp":1770195823255,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"server/index.js:gemini-response","message":"Gemini 200","data":{"finishReason":"STOP","hasCandidates":true,"rawLength":1128},"timestamp":1770195826525,"sessionId":"debug-session","hypothesisId":"D"}
+{"location":"server/index.js:success","message":"Returning days","data":{"daysCount":14},"timestamp":1770195826525,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"ForecastPage.jsx:fetch-then","message":"Response received","data":{"ok":true,"status":200},"timestamp":1770195826528,"sessionId":"debug-session","hypothesisId":"C"}
+{"location":"ForecastPage.jsx:data","message":"Parsed response","data":{"hasError":false,"daysLength":14},"timestamp":1770195826529,"sessionId":"debug-session","hypothesisId":"C"}
+{"location":"ForecastPage.jsx:effect","message":"Sending forecast request","data":{"horizon":14,"dataFromFile":true},"timestamp":1770195829321,"sessionId":"debug-session","hypothesisId":"C"}
+{"location":"server/index.js:forecast/resources:entry","message":"Route hit","data":{"hasKey":true,"keyPrefix":"AIzaSyDjwY"},"timestamp":1770195829329,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"server/index.js:gemini-response","message":"Gemini 200","data":{"finishReason":"STOP","hasCandidates":true,"rawLength":1128},"timestamp":1770195832589,"sessionId":"debug-session","hypothesisId":"D"}
+{"location":"server/index.js:success","message":"Returning days","data":{"daysCount":14},"timestamp":1770195832590,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"ForecastPage.jsx:fetch-then","message":"Response received","data":{"ok":true,"status":200},"timestamp":1770195832594,"sessionId":"debug-session","hypothesisId":"C"}
+{"location":"ForecastPage.jsx:data","message":"Parsed response","data":{"hasError":false,"daysLength":14},"timestamp":1770195832595,"sessionId":"debug-session","hypothesisId":"C"}
+{"location":"ForecastPage.jsx:effect","message":"Sending forecast request","data":{"horizon":14,"dataFromFile":true},"timestamp":1770195870310,"sessionId":"debug-session","hypothesisId":"C"}
+{"location":"server/index.js:forecast/resources:entry","message":"Route hit","data":{"hasKey":true,"keyPrefix":"AIzaSyDjwY"},"timestamp":1770195870321,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"server/index.js:gemini-response","message":"Gemini 200","data":{"finishReason":"STOP","hasCandidates":true,"rawLength":1128},"timestamp":1770195873542,"sessionId":"debug-session","hypothesisId":"D"}
+{"location":"server/index.js:success","message":"Returning days","data":{"daysCount":14},"timestamp":1770195873543,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"ForecastPage.jsx:fetch-then","message":"Response received","data":{"ok":true,"status":200},"timestamp":1770195873546,"sessionId":"debug-session","hypothesisId":"C"}
+{"location":"ForecastPage.jsx:data","message":"Parsed response","data":{"hasError":false,"daysLength":14},"timestamp":1770195873547,"sessionId":"debug-session","hypothesisId":"C"}
+{"location":"ForecastPage.jsx:effect","message":"Sending forecast request","data":{"horizon":14,"dataFromFile":true},"timestamp":1770196230436,"sessionId":"debug-session","hypothesisId":"C"}
+{"location":"ForecastPage.jsx:effect","message":"Sending forecast request","data":{"horizon":14,"dataFromFile":true},"timestamp":1770196230436,"sessionId":"debug-session","hypothesisId":"C"}
+{"location":"server/index.js:forecast/resources:entry","message":"Route hit","data":{"hasKey":true,"keyPrefix":"AIzaSyDjwY"},"timestamp":1770196230457,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"server/index.js:forecast/resources:entry","message":"Route hit","data":{"hasKey":true,"keyPrefix":"AIzaSyDjwY"},"timestamp":1770196230480,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"ForecastPage.jsx:effect","message":"Sending forecast request","data":{"horizon":7,"dataFromFile":true},"timestamp":1770196233074,"sessionId":"debug-session","hypothesisId":"C"}
+{"location":"server/index.js:forecast/resources:entry","message":"Route hit","data":{"hasKey":true,"keyPrefix":"AIzaSyDjwY"},"timestamp":1770196233079,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"server/index.js:gemini-response","message":"Gemini 200","data":{"finishReason":"STOP","hasCandidates":true,"rawLength":1128},"timestamp":1770196233558,"sessionId":"debug-session","hypothesisId":"D"}
+{"location":"server/index.js:success","message":"Returning days","data":{"daysCount":14},"timestamp":1770196233558,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"ForecastPage.jsx:fetch-then","message":"Response received","data":{"ok":true,"status":200},"timestamp":1770196233562,"sessionId":"debug-session","hypothesisId":"C"}
+{"location":"ForecastPage.jsx:data","message":"Parsed response","data":{"hasError":false,"daysLength":14},"timestamp":1770196233563,"sessionId":"debug-session","hypothesisId":"C"}
+{"location":"server/index.js:gemini-response","message":"Gemini 200","data":{"finishReason":"STOP","hasCandidates":true,"rawLength":1128},"timestamp":1770196233701,"sessionId":"debug-session","hypothesisId":"D"}
+{"location":"server/index.js:success","message":"Returning days","data":{"daysCount":14},"timestamp":1770196233702,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"ForecastPage.jsx:fetch-then","message":"Response received","data":{"ok":true,"status":200},"timestamp":1770196233705,"sessionId":"debug-session","hypothesisId":"C"}
+{"location":"ForecastPage.jsx:data","message":"Parsed response","data":{"hasError":false,"daysLength":14},"timestamp":1770196233705,"sessionId":"debug-session","hypothesisId":"C"}
+{"location":"ForecastPage.jsx:effect","message":"Sending forecast request","data":{"horizon":21,"dataFromFile":true},"timestamp":1770196233819,"sessionId":"debug-session","hypothesisId":"C"}
+{"location":"server/index.js:forecast/resources:entry","message":"Route hit","data":{"hasKey":true,"keyPrefix":"AIzaSyDjwY"},"timestamp":1770196233822,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"ForecastPage.jsx:effect","message":"Sending forecast request","data":{"horizon":30,"dataFromFile":true},"timestamp":1770196234552,"sessionId":"debug-session","hypothesisId":"C"}
+{"location":"server/index.js:forecast/resources:entry","message":"Route hit","data":{"hasKey":true,"keyPrefix":"AIzaSyDjwY"},"timestamp":1770196234556,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"server/index.js:gemini-response","message":"Gemini 200","data":{"finishReason":"STOP","hasCandidates":true,"rawLength":877},"timestamp":1770196237273,"sessionId":"debug-session","hypothesisId":"D"}
+{"location":"server/index.js:success","message":"Returning days","data":{"daysCount":7},"timestamp":1770196237273,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"ForecastPage.jsx:fetch-then","message":"Response received","data":{"ok":true,"status":200},"timestamp":1770196237277,"sessionId":"debug-session","hypothesisId":"C"}
+{"location":"ForecastPage.jsx:data","message":"Parsed response","data":{"hasError":false,"daysLength":7},"timestamp":1770196237278,"sessionId":"debug-session","hypothesisId":"C"}
+{"location":"server/index.js:gemini-response","message":"Gemini 200","data":{"finishReason":"STOP","hasCandidates":true,"rawLength":1681},"timestamp":1770196238289,"sessionId":"debug-session","hypothesisId":"D"}
+{"location":"server/index.js:success","message":"Returning days","data":{"daysCount":21},"timestamp":1770196238290,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"ForecastPage.jsx:fetch-then","message":"Response received","data":{"ok":true,"status":200},"timestamp":1770196238294,"sessionId":"debug-session","hypothesisId":"C"}
+{"location":"ForecastPage.jsx:data","message":"Parsed response","data":{"hasError":false,"daysLength":21},"timestamp":1770196238295,"sessionId":"debug-session","hypothesisId":"C"}
+{"location":"server/index.js:gemini-response","message":"Gemini 200","data":{"finishReason":"STOP","hasCandidates":true,"rawLength":2392},"timestamp":1770196241996,"sessionId":"debug-session","hypothesisId":"D"}
+{"location":"server/index.js:success","message":"Returning days","data":{"daysCount":30},"timestamp":1770196241997,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"ForecastPage.jsx:fetch-then","message":"Response received","data":{"ok":true,"status":200},"timestamp":1770196242001,"sessionId":"debug-session","hypothesisId":"C"}
+{"location":"ForecastPage.jsx:data","message":"Parsed response","data":{"hasError":false,"daysLength":30},"timestamp":1770196242002,"sessionId":"debug-session","hypothesisId":"C"}
+{"location":"ForecastPage.jsx:effect","message":"Sending forecast request","data":{"horizon":14,"dataFromFile":true},"timestamp":1770196408059,"sessionId":"debug-session","hypothesisId":"C"}
+{"location":"ForecastPage.jsx:effect","message":"Sending forecast request","data":{"horizon":14,"dataFromFile":true},"timestamp":1770196408060,"sessionId":"debug-session","hypothesisId":"C"}
+{"location":"server/index.js:forecast/resources:entry","message":"Route hit","data":{"hasKey":true,"keyPrefix":"AIzaSyDjwY"},"timestamp":1770196408080,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"server/index.js:forecast/resources:entry","message":"Route hit","data":{"hasKey":true,"keyPrefix":"AIzaSyDjwY"},"timestamp":1770196408083,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"server/index.js:gemini-response","message":"Gemini 200","data":{"finishReason":"STOP","hasCandidates":true,"rawLength":1128},"timestamp":1770196411222,"sessionId":"debug-session","hypothesisId":"D"}
+{"location":"server/index.js:success","message":"Returning days","data":{"daysCount":14},"timestamp":1770196411222,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"ForecastPage.jsx:fetch-then","message":"Response received","data":{"ok":true,"status":200},"timestamp":1770196411225,"sessionId":"debug-session","hypothesisId":"C"}
+{"location":"ForecastPage.jsx:data","message":"Parsed response","data":{"hasError":false,"daysLength":14},"timestamp":1770196411225,"sessionId":"debug-session","hypothesisId":"C"}
+{"location":"server/index.js:gemini-response","message":"Gemini 200","data":{"finishReason":"STOP","hasCandidates":true,"rawLength":1128},"timestamp":1770196411293,"sessionId":"debug-session","hypothesisId":"D"}
+{"location":"server/index.js:success","message":"Returning days","data":{"daysCount":14},"timestamp":1770196411294,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"ForecastPage.jsx:fetch-then","message":"Response received","data":{"ok":true,"status":200},"timestamp":1770196411296,"sessionId":"debug-session","hypothesisId":"C"}
+{"location":"ForecastPage.jsx:data","message":"Parsed response","data":{"hasError":false,"daysLength":14},"timestamp":1770196411297,"sessionId":"debug-session","hypothesisId":"C"}
+{"location":"ForecastPage.jsx:effect","message":"Sending forecast request","data":{"horizon":14,"dataFromFile":true},"timestamp":1770201239764,"sessionId":"debug-session","hypothesisId":"C"}
+{"location":"server/index.js:forecast/resources:entry","message":"Route hit","data":{"hasKey":true,"keyPrefix":"AIzaSyDjwY"},"timestamp":1770201239779,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"server/index.js:gemini-response","message":"Gemini 200","data":{"finishReason":"STOP","hasCandidates":true,"rawLength":1128},"timestamp":1770201242729,"sessionId":"debug-session","hypothesisId":"D"}
+{"location":"server/index.js:success","message":"Returning days","data":{"daysCount":14},"timestamp":1770201242730,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"ForecastPage.jsx:fetch-then","message":"Response received","data":{"ok":true,"status":200},"timestamp":1770201242734,"sessionId":"debug-session","hypothesisId":"C"}
+{"location":"ForecastPage.jsx:data","message":"Parsed response","data":{"hasError":false,"daysLength":14},"timestamp":1770201242735,"sessionId":"debug-session","hypothesisId":"C"}
+{"location":"ForecastPage.jsx:effect","message":"Sending forecast request","data":{"horizon":14,"dataFromFile":true},"timestamp":1770202668050,"sessionId":"debug-session","hypothesisId":"C"}
+{"location":"ForecastPage.jsx:effect","message":"Sending forecast request","data":{"horizon":14,"dataFromFile":true},"timestamp":1770202668050,"sessionId":"debug-session","hypothesisId":"C"}
+{"location":"server/index.js:forecast/resources:entry","message":"Route hit","data":{"hasKey":true,"keyPrefix":"AIzaSyDjwY"},"timestamp":1770202668060,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"server/index.js:forecast/resources:entry","message":"Route hit","data":{"hasKey":true,"keyPrefix":"AIzaSyDjwY"},"timestamp":1770202668064,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"server/index.js:gemini-response","message":"Gemini 200","data":{"finishReason":"STOP","hasCandidates":true,"rawLength":1128},"timestamp":1770202671119,"sessionId":"debug-session","hypothesisId":"D"}
+{"location":"server/index.js:success","message":"Returning days","data":{"daysCount":14},"timestamp":1770202671119,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"ForecastPage.jsx:fetch-then","message":"Response received","data":{"ok":true,"status":200},"timestamp":1770202671124,"sessionId":"debug-session","hypothesisId":"C"}
+{"location":"ForecastPage.jsx:data","message":"Parsed response","data":{"hasError":false,"daysLength":14},"timestamp":1770202671125,"sessionId":"debug-session","hypothesisId":"C"}
+{"location":"server/index.js:gemini-response","message":"Gemini 200","data":{"finishReason":"STOP","hasCandidates":true,"rawLength":1128},"timestamp":1770202671170,"sessionId":"debug-session","hypothesisId":"D"}
+{"location":"server/index.js:success","message":"Returning days","data":{"daysCount":14},"timestamp":1770202671170,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"ForecastPage.jsx:fetch-then","message":"Response received","data":{"ok":true,"status":200},"timestamp":1770202671172,"sessionId":"debug-session","hypothesisId":"C"}
+{"location":"ForecastPage.jsx:data","message":"Parsed response","data":{"hasError":false,"daysLength":14},"timestamp":1770202671172,"sessionId":"debug-session","hypothesisId":"C"}
+{"location":"ForecastPage.jsx:effect","message":"Sending forecast request","data":{"horizon":14,"dataFromFile":true},"timestamp":1770211039342,"sessionId":"debug-session","hypothesisId":"C"}
+{"location":"ForecastPage.jsx:effect","message":"Sending forecast request","data":{"horizon":14,"dataFromFile":true},"timestamp":1770211039344,"sessionId":"debug-session","hypothesisId":"C"}
+{"location":"server/index.js:forecast/resources:entry","message":"Route hit","data":{"hasKey":true,"keyPrefix":"AIzaSyBiIg"},"timestamp":1770211039356,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"server/index.js:forecast/resources:entry","message":"Route hit","data":{"hasKey":true,"keyPrefix":"AIzaSyBiIg"},"timestamp":1770211039367,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"server/index.js:gemini-response","message":"Gemini 200","data":{"finishReason":"STOP","hasCandidates":true,"rawLength":1128},"timestamp":1770211043140,"sessionId":"debug-session","hypothesisId":"D"}
+{"location":"server/index.js:success","message":"Returning days","data":{"daysCount":14},"timestamp":1770211043141,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"ForecastPage.jsx:fetch-then","message":"Response received","data":{"ok":true,"status":200},"timestamp":1770211043145,"sessionId":"debug-session","hypothesisId":"C"}
+{"location":"ForecastPage.jsx:data","message":"Parsed response","data":{"hasError":false,"daysLength":14},"timestamp":1770211043145,"sessionId":"debug-session","hypothesisId":"C"}
+{"location":"server/index.js:gemini-response","message":"Gemini 200","data":{"finishReason":"STOP","hasCandidates":true,"rawLength":1128},"timestamp":1770211043775,"sessionId":"debug-session","hypothesisId":"D"}
+{"location":"server/index.js:success","message":"Returning days","data":{"daysCount":14},"timestamp":1770211043775,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"ForecastPage.jsx:fetch-then","message":"Response received","data":{"ok":true,"status":200},"timestamp":1770211043778,"sessionId":"debug-session","hypothesisId":"C"}
+{"location":"ForecastPage.jsx:data","message":"Parsed response","data":{"hasError":false,"daysLength":14},"timestamp":1770211043778,"sessionId":"debug-session","hypothesisId":"C"}

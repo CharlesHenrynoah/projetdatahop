@@ -1,12 +1,26 @@
 import { useState } from 'react'
 import { useParams, Link, useNavigate } from 'react-router-dom'
-import { RECOMMANDATIONS_MOCK } from '../data/recommandations'
+import { useRecommandations } from '../context/RecommandationsContext'
+import { useData } from '../context/DataContext'
+import { hospitalData } from '../components/DataGenerator'
 import './ImpactSimulationPage.css'
+
+const STOCK_ORDER = ['Critique', 'Tension', 'Stable', 'Confort']
+function stockDelta(avant, apres) {
+  const iAv = STOCK_ORDER.indexOf(avant)
+  const iAp = STOCK_ORDER.indexOf(apres)
+  if (iAv < 0 || iAp < 0) return '—'
+  if (iAp > iAv) return 'Amélioration'
+  if (iAp < iAv) return 'Dégradation'
+  return 'Stable'
+}
 
 export default function ImpactSimulationPage() {
   const { id } = useParams()
   const navigate = useNavigate()
-  const reco = RECOMMANDATIONS_MOCK.find((r) => r.id === id)
+  const { dataFromFile } = useData()
+  const { recommandations } = useRecommandations()
+  const reco = recommandations.find((r) => r.id === id)
 
   const [params, setParams] = useState({
     nbLits: 10,
@@ -14,6 +28,9 @@ export default function ImpactSimulationPage() {
     dureeHeures: 24,
   })
   const [simule, setSimule] = useState(false)
+  const [resultats, setResultats] = useState(null)
+  const [loading, setLoading] = useState(false)
+  const [llmError, setLlmError] = useState(null)
 
   if (!reco) {
     return (
@@ -24,20 +41,74 @@ export default function ImpactSimulationPage() {
     )
   }
 
-  const handleSimuler = () => setSimule(true)
-
-  const resultatsMock = simule
-    ? {
-        occupationAvant: 88,
-        occupationApres: 84,
-        fluxPatientsAvant: 120,
-        fluxPatientsApres: 115,
-        tensionRHAvant: 72,
-        tensionRHApres: 78,
-        stocksAvant: 'Critique',
-        stocksApres: 'Stable',
-      }
-    : null
+  const handleSimuler = () => {
+    setSimule(true)
+    setLlmError(null)
+    setResultats(null)
+    setLoading(true)
+    const latest = dataFromFile && hospitalData.hasData() ? hospitalData.getLatest() : null
+    const apiBase = (typeof import.meta !== 'undefined' && import.meta.env?.VITE_API_URL) || ''
+    const fullUrl = apiBase ? `${String(apiBase).replace(/\/$/, '')}/api/simulation/impact` : '/api/simulation/impact'
+    const fallbackResultats = {
+      occupationAvant: 88,
+      occupationApres: 84,
+      fluxPatientsAvant: 120,
+      fluxPatientsApres: 115,
+      tensionRHAvant: 72,
+      tensionRHApres: 78,
+      stocksAvant: 'Critique',
+      stocksApres: 'Stable',
+    }
+    fetch(fullUrl, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        actionProposee: reco.actionProposee,
+        service: reco.service,
+        nbLits: params.nbLits,
+        effectifsDeplaces: params.effectifsDeplaces,
+        dureeHeures: params.dureeHeures,
+        latest: latest ? { admissions: latest.admissions, occupiedBeds: latest.occupiedBeds, availableStaff: latest.availableStaff } : undefined,
+      }),
+    })
+      .then((r) => {
+        const ct = r.headers.get('content-type') || ''
+        if (!ct.includes('application/json')) {
+          throw new Error(r.status === 502 || r.status === 503 ? 'Serveur ou proxy indisponible' : `Réponse non-JSON (${r.status})`)
+        }
+        return r.json()
+      })
+      .then((data) => {
+        if (data.ok && data.occupationAvant != null) {
+          setResultats({
+            occupationAvant: data.occupationAvant,
+            occupationApres: data.occupationApres,
+            fluxPatientsAvant: data.fluxPatientsAvant,
+            fluxPatientsApres: data.fluxPatientsApres,
+            tensionRHAvant: data.tensionRHAvant,
+            tensionRHApres: data.tensionRHApres,
+            stocksAvant: data.stocksAvant,
+            stocksApres: data.stocksApres,
+          })
+          setLlmError(null)
+        } else {
+          const detail = data.detail ? ` — ${data.detail}` : ''
+          setLlmError((data.error || 'Réponse invalide') + detail)
+          setResultats(fallbackResultats)
+        }
+      })
+      .catch((err) => {
+        const msg = err?.message || ''
+        const isNetwork = msg.includes('Failed to fetch') || msg.includes('NetworkError') || msg.includes('Load failed')
+        setLlmError(
+          isNetwork || !msg
+            ? 'Serveur API injoignable. Lancez « npm run dev » (API + front) ou « npm run server » sur le port 3001.'
+            : msg
+        )
+        setResultats(fallbackResultats)
+      })
+      .finally(() => setLoading(false))
+  }
 
   return (
     <main className="page page--impact">
@@ -98,8 +169,9 @@ export default function ImpactSimulationPage() {
             type="button"
             className="btn btn-primary impact-btn-simuler"
             onClick={handleSimuler}
+            disabled={loading}
           >
-            Lancer la simulation
+            {loading ? 'Simulation en cours…' : 'Lancer la simulation'}
           </button>
         </section>
 
@@ -109,8 +181,22 @@ export default function ImpactSimulationPage() {
             <p className="impact-placeholder">
               Ajustez les paramètres et lancez la simulation pour afficher les résultats.
             </p>
-          ) : (
+          ) : loading ? (
+            <p className="impact-placeholder" style={{ color: 'var(--color-primary, #2563eb)' }}>
+              Génération par l&apos;IA (Gemini)…
+            </p>
+          ) : resultats ? (
             <>
+              {llmError && (
+                <p className="impact-llm-error" role="alert">
+                  {llmError} — Affichage des valeurs de démonstration.
+                </p>
+              )}
+              {!llmError && (
+                <p className="impact-llm-ok">
+                  Résultats simulés par l&apos;IA (Gemini).
+                </p>
+              )}
               <div className="impact-avant-apres">
                 <table className="impact-table">
                   <thead>
@@ -123,40 +209,42 @@ export default function ImpactSimulationPage() {
                   </thead>
                   <tbody>
                     <tr>
-                      <td>Taux d'occupation (%)</td>
-                      <td>{resultatsMock.occupationAvant}</td>
-                      <td className="impact-apres">{resultatsMock.occupationApres}</td>
-                      <td className="impact-delta impact-delta--positif">
-                        {resultatsMock.occupationApres - resultatsMock.occupationAvant} %
+                      <td>Taux d&apos;occupation (%)</td>
+                      <td>{resultats.occupationAvant}</td>
+                      <td className="impact-apres">{resultats.occupationApres}</td>
+                      <td className={`impact-delta ${resultats.occupationApres - resultats.occupationAvant <= 0 ? 'impact-delta--positif' : 'impact-delta--negatif'}`}>
+                        {resultats.occupationApres - resultats.occupationAvant} %
                       </td>
                     </tr>
                     <tr>
                       <td>Flux patients (/jour)</td>
-                      <td>{resultatsMock.fluxPatientsAvant}</td>
-                      <td>{resultatsMock.fluxPatientsApres}</td>
-                      <td className="impact-delta impact-delta--negatif">
-                        {resultatsMock.fluxPatientsApres - resultatsMock.fluxPatientsAvant}
+                      <td>{resultats.fluxPatientsAvant}</td>
+                      <td>{resultats.fluxPatientsApres}</td>
+                      <td className={`impact-delta ${resultats.fluxPatientsApres - resultats.fluxPatientsAvant <= 0 ? 'impact-delta--positif' : 'impact-delta--negatif'}`}>
+                        {resultats.fluxPatientsApres - resultats.fluxPatientsAvant}
                       </td>
                     </tr>
                     <tr>
                       <td>Tension RH (%)</td>
-                      <td>{resultatsMock.tensionRHAvant}</td>
-                      <td className="impact-apres">{resultatsMock.tensionRHApres}</td>
-                      <td className="impact-delta impact-delta--positif">
-                        +{resultatsMock.tensionRHApres - resultatsMock.tensionRHAvant} %
+                      <td>{resultats.tensionRHAvant}</td>
+                      <td className="impact-apres">{resultats.tensionRHApres}</td>
+                      <td className={`impact-delta ${resultats.tensionRHApres - resultats.tensionRHAvant >= 0 ? 'impact-delta--positif' : 'impact-delta--negatif'}`}>
+                        {resultats.tensionRHApres - resultats.tensionRHAvant >= 0 ? '+' : ''}{resultats.tensionRHApres - resultats.tensionRHAvant} %
                       </td>
                     </tr>
                     <tr>
                       <td>Stocks</td>
-                      <td>{resultatsMock.stocksAvant}</td>
-                      <td>{resultatsMock.stocksApres}</td>
-                      <td className="impact-delta impact-delta--positif">Amélioration</td>
+                      <td>{resultats.stocksAvant}</td>
+                      <td>{resultats.stocksApres}</td>
+                      <td className={`impact-delta ${stockDelta(resultats.stocksAvant, resultats.stocksApres) === 'Amélioration' ? 'impact-delta--positif' : stockDelta(resultats.stocksAvant, resultats.stocksApres) === 'Dégradation' ? 'impact-delta--negatif' : ''}`}>
+                        {stockDelta(resultats.stocksAvant, resultats.stocksApres)}
+                      </td>
                     </tr>
                   </tbody>
                 </table>
               </div>
               <p className="impact-kpi-hint">
-                Courbes d'évolution et KPI détaillés — à brancher sur vos données temps réel.
+                Courbes d&apos;évolution et KPI détaillés — à brancher sur vos données temps réel.
               </p>
               <div className="impact-actions">
                 <button
@@ -171,6 +259,10 @@ export default function ImpactSimulationPage() {
                 </Link>
               </div>
             </>
+          ) : (
+            <p className="impact-placeholder">
+              Aucun résultat — réessayez ou vérifiez que le serveur et Gemini sont connectés.
+            </p>
           )}
         </section>
       </div>

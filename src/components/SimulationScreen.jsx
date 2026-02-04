@@ -2,7 +2,6 @@ import Zone1Contexte from './Zone1Contexte'
 import Zone2Parametres from './Zone2Parametres'
 import Zone3Resultats from './Zone3Resultats'
 import FooterSimulation from './FooterSimulation'
-import './SimulationScreen.css'
 
 export default function SimulationScreen({
   scenarios,
@@ -18,16 +17,19 @@ export default function SimulationScreen({
   getStatusColor,
   etatInitial,
   simulationTimestamp,
+  llmAnalysis,
+  llmLoading,
+  llmIndicatorsUsed,
   onVoirActionsRecommandees,
 }) {
   return (
-    <main className="simulation-screen">
+    <main className="flex-1 flex flex-col w-full max-w-5xl mx-auto">
       <Zone1Contexte
         scenarios={scenarios}
         scenario={scenario}
         onScenarioChange={onScenarioChange}
       />
-      <div className="simulation-content">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-4">
         <Zone2Parametres
           params={params}
           onParamChange={onParamChange}
@@ -40,6 +42,9 @@ export default function SimulationScreen({
           getStatusColor={getStatusColor}
           etatInitial={etatInitial}
           simulationTimestamp={simulationTimestamp}
+          llmAnalysis={llmAnalysis}
+          llmLoading={llmLoading}
+          llmIndicatorsUsed={llmIndicatorsUsed}
           onVoirActionsRecommandees={onVoirActionsRecommandees}
         />
       </div>

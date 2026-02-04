@@ -1,0 +1,131 @@
+.page--create-reco .page-header {
+  margin-bottom: 1rem;
+}
+
+.create-reco-title {
+  margin: 0 0 0.25rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1a365d;
+}
+
+.create-reco-subtitle {
+  margin: 0 0 1.5rem;
+  font-size: 0.95rem;
+  color: #4a5568;
+}
+
+.create-reco-error {
+  margin-bottom: 1rem;
+  padding: 0.75rem 1rem;
+  font-size: 0.95rem;
+  color: #b91c1c;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+}
+
+.create-reco-form {
+  max-width: 720px;
+}
+
+.create-reco-section {
+  margin-bottom: 1.75rem;
+  padding: 1.25rem;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.create-reco-section-title {
+  margin: 0 0 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #4a5568;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.create-reco-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+@media (max-width: 600px) {
+  .create-reco-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.create-reco-field--full {
+  grid-column: 1 / -1;
+}
+
+.create-reco-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.create-reco-label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #4a5568;
+}
+
+.create-reco-input {
+  padding: 0.5rem 0.75rem;
+  font-size: 0.95rem;
+  border: 1px solid #cbd5e0;
+  border-radius: 6px;
+  background: #fff;
+}
+
+.create-reco-input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
+.create-reco-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.create-reco-btn {
+  padding: 0.5rem 1.25rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: background 0.2s, color 0.2s;
+  border: none;
+}
+
+.create-reco-btn--primary {
+  background: #2563eb;
+  color: #fff;
+}
+
+.create-reco-btn--primary:hover {
+  background: #1d4ed8;
+}
+
+.create-reco-btn--secondary {
+  background: #fff;
+  color: #4a5568;
+  border: 1px solid #cbd5e0;
+}
+
+.create-reco-btn--secondary:hover {
+  background: #f7fafc;
+  border-color: #a0aec0;
+}

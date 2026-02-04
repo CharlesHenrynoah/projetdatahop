@@ -117,6 +117,19 @@
   margin-bottom: 0.35rem;
 }
 
+.action-message {
+  margin-bottom: 1rem;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+}
+
+.action-message--success {
+  background: #ecfdf5;
+  color: #065f46;
+  border: 1px solid #6ee7b7;
+}
+
 .action-buttons {
   display: flex;
   flex-wrap: wrap;
@@ -157,4 +170,50 @@
 .btn-outline:hover {
   background: #f7fafc;
   border-color: #a0aec0;
+}
+
+/* Modal confirmation Appliquer */
+.action-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.action-modal {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem 2rem;
+  max-width: 420px;
+  width: 100%;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+}
+
+.action-modal-title {
+  margin: 0 0 1rem;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #1a365d;
+}
+
+.action-modal-text {
+  margin: 0 0 1.5rem;
+  font-size: 0.95rem;
+  color: #4a5568;
+  line-height: 1.5;
+}
+
+.action-modal-text strong {
+  color: #2d3748;
+}
+
+.action-modal-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: flex-end;
 }
